@@ -1,5 +1,5 @@
-<html  itemscope itemtype="http://schema.org/Article/">
-<head>
+<!doctype html>
+  <html amp lang="en">
   <meta charset="utf-8">
   <link rel="canonical" href="https://www.adball.online">
 
@@ -11,18 +11,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
 
   <!-- BEGIN Pre-requisites -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
-  </script>
-  <script src="https://apis.google.com/js/client:platform.js?onload=start" async defer>
-  </script>
-  <!-- END Pre-requisites -->
-
-<!---
-
-teaserImage: '/static/samples/img/teaser/user_consent_modal_ui.png'
-author: micajuineho
-
---->
+  
 
 <!--
   ## Introduction
@@ -36,24 +25,13 @@ author: micajuineho
   <script custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js" async></script>
   <script async custom-element="amp-consent" src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"></script>
   <script async custom-element="amp-story-auto-ads" src="https://cdn.ampproject.org/v0/amp-story-auto-ads-0.1.js"></script>
-  <meta name="viewport" content="width=device-width">
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
   
   <!-- ## Setup -->
   <!--
   We need to import the `amp-consent` component.
   -->
-  <script type="application/json">{
-    function start() {
-      gapi.load('auth2', function() {
-        auth2 = gapi.auth2.init({
-          client_id: '273557574430-mc5cfgff1qu3bjn51qc8g56lnuoudofh.apps.googleusercontent.com',
-          // Scopes to request in addition to 'profile' and 'email'
-          //scope: 'additional_scope'
-        });
-      });
-    }
- <script>
+  
    <style amp-custom>
 
       .div {
@@ -138,11 +116,11 @@ author: micajuineho
 </head>
 <body>
 <div align="center">
-<header> 
+ 
 <h1>
 How The Ad Revenue Index Works
 </h1>
-</header>
+
 
 <amp-img data-block-off-consent src="https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/Main_GoogleFonts%2520%25281%2529.png" width="300" height="201">
 </amp-img>
@@ -223,19 +201,14 @@ Ezoic created the index to help publishers better understand and contextualize t
   
   
   </div>
-  <!-- Add where you want your sign-in button to render -->
-<!-- Use an image that follows the branding guidelines in a real app -->
-<button id="signinButton">Offline With Google</button>
-<script type="application/json">{
-  $('#signinButton').click(function() {
-    // signInCallback defined in step 6.
-    auth2.grantOfflineAccess().then(signInCallback);
-  });
-</script>
-  
+
                                          
   <div id="my-signin2"></div>
-  <script type="application/json">{
+  <!--
+
+  
+```js
+{
     function onSuccess(googleUser) {
       console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
     }
@@ -282,8 +255,9 @@ function signInCallback(authResult) {
     // There was an error.
   }
 }
-</script>
-  
+```
+
+  -->
 <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 
   
