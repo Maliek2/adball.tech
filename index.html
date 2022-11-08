@@ -48,18 +48,26 @@
 <body>
 <!-- Add where you want your sign-in button to render -->
 <!-- Use an image that follows the branding guidelines in a real app -->
-<button id="signinButton">Offline With Google</button>
-<script>
-  $('#signinButton').click(function() {
-    // signInCallback defined in step 6.
-    auth2.grantOfflineAccess().then(signInCallback);
-  });
-</script>
-  
+<canvas id="gameContainer" height="300px" width="300px"></canvas>
+    <button id="playButton">Play</button>
+    <button style="display:none" id="headsButton">Heads</button>
+    <button style="display:none" id="tailsButton">Tails</button>
+    <script async
+      data-admob-interstitial-slot="ca-app-pub-0987654321/1234567890"
+      data-admob-rewarded-slot="ca-app-pub-0987654321/0987654321"
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-123456789"
+      crossorigin="anonymous">
+    </script>
+    <script>
+      window.adsbygoogle = window.adsbygoogle || [];
+      const adBreak = adConfig = function(o) {adsbygoogle.push(o);}
+    </script>
+    <script src="game.js"></script>
 
                                          
- 
+
   <div id="my-signin2"></div>
+
   <script>
     function onSuccess(googleUser) {
       console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
@@ -80,7 +88,7 @@
     }
   </script>
 
-  <script>
+   <script>
 function signInCallback(authResult) {
   if (authResult['code']) {
 
@@ -90,7 +98,7 @@ function signInCallback(authResult) {
     // Send the code to the server
     $.ajax({
       type: 'POST',
-      url: 'http://www.adball.online/login',
+      url: 'http://www.adball.online/auth',
       // Always include an `X-Requested-With` header in every AJAX request,
       // to protect against CSRF attacks.
       headers: {
@@ -107,7 +115,7 @@ function signInCallback(authResult) {
     // There was an error.
   }
 }
-</script>
+  </script>
   
   
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
