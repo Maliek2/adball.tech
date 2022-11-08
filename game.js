@@ -65,25 +65,3 @@ class Game {
 
     this.erase();
 
-
-
-
-
-
-
-
-
-// If true, start function. If false, listen for INIT.
-window.onload = function() {
-  if (Enabler.isInitialized()) {
-    enablerInitHandler();
-  } else {
-    Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInitHandler);
-  }
-}
-
-function enablerInitHandler() {
-  // Start polite loading, or start animation,
-  // load in your image assets, call Enabler methods,
-  // and/or include other Studio modules.
-}
