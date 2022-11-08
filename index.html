@@ -45,6 +45,7 @@
     }
   </script>
  </head>
+
 <body>
 <!-- Add where you want your sign-in button to render -->
 <!-- Use an image that follows the branding guidelines in a real app -->
@@ -52,16 +53,8 @@
     <button id="playButton">Play</button>
     <button style="display:none" id="headsButton">Heads</button>
     <button style="display:none" id="tailsButton">Tails</button>
-    <script async
-      data-admob-interstitial-slot="ca-app-pub-6607653375286321/7893283028"
-      data-admob-rewarded-slot="ca-app-pub-6607653375286321/9357958883"
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6607653375286321" crossorigin="anonymous">
-    </script>
-    <script>
-      window.adsbygoogle = window.adsbygoogle || [];
-      const adBreak = adConfig = function(o) {adsbygoogle.push(o);}
-    </script>
-    <script src="game.js"></script>
+    
+    <script async src="https://www.adball.tech/game.js"></script>
 
     <div id="my-signin2"></div>
 
@@ -114,7 +107,15 @@ function signInCallback(authResult) {
 }
   </script>
   
-  
+   <script async
+      data-admob-interstitial-slot="ca-app-pub-6607653375286321/7893283028"
+      data-admob-rewarded-slot="ca-app-pub-6607653375286321/9357958883"
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6607653375286321" crossorigin="anonymous">
+    </script>
+    <script>
+      window.adsbygoogle = window.adsbygoogle || [];
+      const adBreak = adConfig = function(o) {adsbygoogle.push(o);}
+    </script>
     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
     
 
