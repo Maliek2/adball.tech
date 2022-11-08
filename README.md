@@ -22,9 +22,3 @@ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations under
 the License.
 ```
-```
-pip install googleads
-curl https://raw.githubusercontent.com/googleads/googleads-python-lib/master/googleads.yaml \
-     -o ~/googleads.yaml
-
-```
