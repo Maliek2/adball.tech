@@ -24,7 +24,17 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <meta name="google-signin-client_id" content="273557574430-mc5cfgff1qu3bjn51qc8g56lnuoudofh.apps.googleusercontent.com">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-
+  <script async
+      data-admob-interstitial-slot="ca-app-pub-6607653375286321/7893283028"
+      data-admob-rewarded-slot="ca-app-pub-6607653375286321/9357958883"
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6607653375286321" crossorigin="anonymous">
+    </script>
+    <script>
+      window.adsbygoogle = window.adsbygoogle || [];
+      const adBreak = adConfig = function(o) {adsbygoogle.push(o);}
+    </script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    
   <!-- BEGIN Pre-requisites -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
   </script>
@@ -53,14 +63,9 @@
 
 <!-- Add where you want your sign-in button to render -->
 <!-- Use an image that follows the branding guidelines in a real app -->
-    <canvas id="gameContainer" height="300px" width="300px"></canvas>
-    <button id="playButton">Play</button>
-    <button style="display:none" id="headsButton">Heads</button>
-    <button style="display:none" id="tailsButton">Tails</button>
-    
-    <script async src="https://www.adball.tech/game.js"></script>
+ <script async src="https://www.adball.tech/game.js"></script>
 
-    <div id="my-signin2"></div>
+ <div id="my-signin2"></div>
 
   <script>
     function onSuccess(googleUser) {
@@ -92,7 +97,7 @@ function signInCallback(authResult) {
     // Send the code to the server
     $.ajax({
       type: 'POST',
-      url: 'http://www.adball.online/auth',
+      url: 'http://www.adball.online/',
       // Always include an `X-Requested-With` header in every AJAX request,
       // to protect against CSRF attacks.
       headers: {
@@ -111,17 +116,7 @@ function signInCallback(authResult) {
 }
   </script>
   
-   <script async
-      data-admob-interstitial-slot="ca-app-pub-6607653375286321/7893283028"
-      data-admob-rewarded-slot="ca-app-pub-6607653375286321/9357958883"
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6607653375286321" crossorigin="anonymous">
-    </script>
-    <script>
-      window.adsbygoogle = window.adsbygoogle || [];
-      const adBreak = adConfig = function(o) {adsbygoogle.push(o);}
-    </script>
-    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-    
+   
 
     <script async
       data-adbreak-test="on"
