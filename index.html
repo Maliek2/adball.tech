@@ -23,7 +23,16 @@
 
     <link href="base.css" rel="stylesheet" />
     <script src="base.js"></script>
-    
+    <script>
+    window.googletag = window.googletag || {cmd: []};
+    googletag.cmd.push(function() {
+        googletag.defineSlot('/22826216928/Travel/Tourism', [300, 300], 'gpt-passback')
+          .addService(googletag.pubads());
+        googletag.pubads().set('page_url', 'https://www.adball.tech/');
+        googletag.enableServices();
+        googletag.display('gpt-passback');
+    });
+    </script>
   </head>
   <body>
 
@@ -36,7 +45,7 @@
   <a href="#">Home</a>
   <a href="#">About</a>
   <a href="#">Contact</a>
-  <a href="#" style="float:right">Privacy</a>
+  <a href="https://www.google.com/about/company/user-consent-policy/" style="float:right">Privacy</a>
 </div>
 
 <div class="row">
