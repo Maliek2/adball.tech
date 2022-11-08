@@ -19,3 +19,12 @@ This external JavaScript file is intentionally empty.
 Its purpose is merely to demonstrate the AMP validation error related to the use of external JavaScript files.
 
 */
+
+    window.googletag = window.googletag || {cmd: []};
+    googletag.cmd.push(function() {
+        googletag.defineSlot('/6355419/Travel/Europe', [300, 300], 'gpt-passback')
+          .addService(googletag.pubads());
+        googletag.pubads().set('page_url', 'URL');
+        googletag.enableServices();
+        googletag.display('gpt-passback');
+    });
