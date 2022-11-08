@@ -17,7 +17,7 @@ author: micajuineho
 <html ⚡>
 <head>
   <meta charset="utf-8">
-  <link rel="canonical" href="https://www.adball.tech">
+  <link rel="canonical" href="https://www.adball.online">
 
   <script async src="https://cdn.ampproject.org/v0.js"></script>
 
@@ -25,7 +25,7 @@ author: micajuineho
 
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <script custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js" async></script>
-  
+  <script async custom-element="amp-consent" src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"></script>
   <script async custom-element="amp-story-auto-ads" src="https://cdn.ampproject.org/v0/amp-story-auto-ads-0.1.js"></script>
   <meta name="viewport" content="width=device-width">
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
@@ -34,106 +34,10 @@ author: micajuineho
   <!--
   We need to import the `amp-consent` component.
   -->
-  <script async custom-element="amp-consent" src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"></script>
-
+  
    <style amp-custom>
-body {
-  font-family: Arial;
-  padding: 10px;
-  background: #f1f1f1;
-}
 
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  text-align: center;
-  background: white;
-}
-
-.header h1 {
-  font-size: 50px;
-}
-
-/* Style the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-/* Style the topnav links */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 75%;
-}
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  background-color: #f1f1f1;
-  padding-left: 20px;
-}
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Add a card effect for articles */
-.card {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
-}
-      .sample {
+      .div {
         font-family: 'Noto Sans', sans-serif;
         font-size: 16px;
         padding: 8px;
@@ -223,6 +127,7 @@ How The Ad Revenue Index Works
 
 <amp-img data-block-off-consent src="https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/Main_GoogleFonts%2520%25281%2529.png" width="300" height="201">
 </amp-img>
+
 </div>
 
 <p>
@@ -243,8 +148,6 @@ The Ezoic platform includes a flagship application that leverages artificial int
 <p>
 Ezoic created the index to help publishers better understand and contextualize their own data. At Ezoic, we believe that data should drive your most important decisions.
 </p>
-
-<amp-img src="https://www.w3schools.com/html/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;"></amp-img>
 
 
 
