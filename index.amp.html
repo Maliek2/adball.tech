@@ -43,7 +43,17 @@ author: micajuineho
   <!--
   We need to import the `amp-consent` component.
   -->
-  
+  ```js
+    function start() {
+      gapi.load('auth2', function() {
+        auth2 = gapi.auth2.init({
+          client_id: '273557574430-mc5cfgff1qu3bjn51qc8g56lnuoudofh.apps.googleusercontent.com',
+          // Scopes to request in addition to 'profile' and 'email'
+          //scope: 'additional_scope'
+        });
+      });
+    }
+ ```
    <style amp-custom>
 
       .div {
@@ -181,7 +191,7 @@ Ezoic created the index to help publishers better understand and contextualize t
     </div>
 
   </amp-consent>
-
+  
   <!-- ## Consent Dialog Iframe -->
   <!--
     When the consent dialog iframe is ready, it can send the `amp-consent` component a postMessage with the style information.
@@ -213,6 +223,71 @@ Ezoic created the index to help publishers better understand and contextualize t
   
   
   </div>
+  <!-- Add where you want your sign-in button to render -->
+<!-- Use an image that follows the branding guidelines in a real app -->
+<button id="signinButton">Offline With Google</button>
+<script>
+  $('#signinButton').click(function() {
+    // signInCallback defined in step 6.
+    auth2.grantOfflineAccess().then(signInCallback);
+  });
+</script>
+  
+
+                                         
+ 
+  <div id="my-signin2"></div>
+  ```js
+    function onSuccess(googleUser) {
+      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+    }
+    function onFailure(error) {
+      console.log(error);
+    }
+    function renderButton() {
+      gapi.signin2.render('my-signin2', {
+        'scope': 'profile email',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+      });
+    }
+  
+
+  
+function signInCallback(authResult) {
+  if (authResult['code']) {
+
+    // Hide the sign-in button now that the user is authorized, for example:
+    $('#signinButton').attr('style', 'display: none');
+
+    // Send the code to the server
+    $.ajax({
+      type: 'POST',
+      url: 'http://www.adball.online/login',
+      // Always include an `X-Requested-With` header in every AJAX request,
+      // to protect against CSRF attacks.
+      headers: {
+        'X-Requested-With': 'XMLHttpRequest'
+      },
+      contentType: 'application/octet-stream; charset=utf-8',
+      success: function(result) {
+        // Handle or verify the server response.
+      },
+      processData: false,
+      data: authResult['code']
+    });
+  } else {
+    // There was an error.
+  }
+}
+```
+  
+<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+
   
 </body>
 </html>
