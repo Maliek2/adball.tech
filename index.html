@@ -22,21 +22,30 @@
     <title>News Blog News</title>
 
     <link href="base.css" rel="stylesheet" />
-    
     <script src="base.js"></script>
-    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <script>
+    window.googletag = window.googletag || {cmd: []};
+    googletag.cmd.push(function() {
+      googletag
+          .defineSlot(
+              '/6355419/Travel/Europe/France/Paris', [300, 250], 'banner-ad')
+          .addService(googletag.pubads());
+      googletag.enableServices();
+    });
+  </script>
   </head>
   <body>
+
   <div class="header">
   <h1>Maliek News</h1>
   <p>Resize the browser window to see the effect.</p>
-</div>
+  </div>
 
 <div class="topnav">
-  <a href="#">Privacy</a>
-  <a href="#">Terms</a>
+  <a href="#">Home</a>
   <a href="#">About</a>
-  <a href="#" style="float:right">Contact</a>
+  <a href="#">Contact</a>
+  <a href="#" style="float:right">Privacy</a>
 </div>
 
 <div class="row">
