@@ -37,7 +37,7 @@ author: micajuineho
   <script async custom-element="amp-consent" src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"></script>
 
    <style amp-custom>
-      .sample {
+      .p {
         font-family: 'Noto Sans', sans-serif;
         font-size: 16px;
         padding: 8px;
@@ -118,6 +118,7 @@ author: micajuineho
 
 </head>
 <body>
+
 <h1> How The Ad Revenue Index Works</h1>
 <p>
 Online publishers often lack transparency regarding how their display ad rates are doing when compared to the rest of the market. Digital publishers experience natural fluctuations in their earnings from ads but most have trouble understanding if their increases (or decreases) in revenue over a particular time frame are specific to their site, or something affecting all sites. The Ad Revenue Index takes a statistically relevant sampling of global sites (of all sizes and demographics) and collectively indexes their ad earnings and displays them in a running real-time aggregate.
@@ -138,20 +139,7 @@ The Ezoic platform includes a flagship application that leverages artificial int
 Ezoic created the index to help publishers better understand and contextualize their own data. At Ezoic, we believe that data should drive your most important decisions.
 </p>
 
-      <amp-story>
-      <amp-story-auto-ads>
-
-      <script type="application/json">
-   {
-    "ad-attributes": {
-     "type": "adsense",
-     "data-ad-client": "ca-pub-6607653375286321",
-     "data-ad-slot": "9329322114"
-    }
-   }
-     </script>
-     </amp-story-auto-ads>
-     </amp-story>
+      
 
 
   <!-- ## Defining the Consent Flow -->
@@ -167,7 +155,7 @@ Ezoic created the index to help publishers better understand and contextualize t
     }</script>
 
     <div id="post-consent-ui">
-      <button on="tap:myUserConsent.prompt()">Update Consent</button>
+      <button class="button" on="tap:myUserConsent.prompt()">Update Consent</button>
     </div>
 
   </amp-consent>
@@ -196,10 +184,11 @@ Ezoic created the index to help publishers better understand and contextualize t
 
     Here is an image which is blocked until consent is given:
   -->
+  <div align="center">
   <amp-img data-block-on-consent src="https://images.unsplash.com/photo-1664098295863-62a394edad97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=860&q=80" width="300" height="201">
   </amp-img>
 
-  
+  </div>
 
 </body>
 </html>
