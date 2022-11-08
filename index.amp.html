@@ -43,7 +43,7 @@ author: micajuineho
         padding: 8px;
       }
 
-      .sample button {
+      .button {
         background-color: #005af0;
         font-weight: 700;
         color: white;
@@ -137,6 +137,23 @@ The Ezoic platform includes a flagship application that leverages artificial int
 <p>
 Ezoic created the index to help publishers better understand and contextualize their own data. At Ezoic, we believe that data should drive your most important decisions.
 </p>
+
+      <amp-story>
+      <amp-story-auto-ads>
+
+      <script type="application/json">
+   {
+    "ad-attributes": {
+     "type": "adsense",
+     "data-ad-client": "ca-pub-6607653375286321",
+     "data-ad-slot": "9329322114"
+    }
+   }
+     </script>
+     </amp-story-auto-ads>
+     </amp-story>
+
+
   <!-- ## Defining the Consent Flow -->
   <!--
     We define a basic consent flow using the `promptUISrc` to load our custom consent iframe.
@@ -148,9 +165,11 @@ Ezoic created the index to help publishers better understand and contextualize t
       "promptUISrc": "/static/samples/files/diy-consent.html",
       "postPromptUI": "post-consent-ui"
     }</script>
+
     <div id="post-consent-ui">
       <button on="tap:myUserConsent.prompt()">Update Consent</button>
     </div>
+
   </amp-consent>
 
   <!-- ## Consent Dialog Iframe -->
@@ -180,28 +199,7 @@ Ezoic created the index to help publishers better understand and contextualize t
   <amp-img data-block-on-consent src="https://images.unsplash.com/photo-1664098295863-62a394edad97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=860&q=80" width="300" height="201">
   </amp-img>
 
-  <amp-script layout="container" src="https://www.adball.tech/components/amp-script/hello-world.js" class="sample">
-      <button id="hello-url">News Blog</button>
-  </amp-script>
-
-    <div>
-      <amp-script layout="fixed-height" height="36" script="time-script" class="sample">
-        <div>
-          The time at page load was: <span id="time" class="answer-text"></span>
-        </div>
-      </amp-script>
-
-      <script id="time-script" type="text/plain" target="amp-script">
-        const fetchCurrentTime = async () => {
-          const response = await fetch('https://adball.tech/documentation/examples/api/time');
-          const data = await response.json();
-          const span = document.getElementById('time');
-          span.textContent = data.time;
-        }
-
-        fetchCurrentTime();
-      </script>
-    </div>
+  
 
 </body>
 </html>
