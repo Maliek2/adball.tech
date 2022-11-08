@@ -1,0 +1,4 @@
+ad_manager:
+  application_name: Adball Online
+  network_code:
+  path_to_private_key_file: INSERT_PATH_TO_FILE_HERE
