@@ -158,12 +158,11 @@
     </style>
 </head>
 <body>
-     <div align="center">
-<header
+<div align="center">
+
 <h1>
 How The Ad Revenue Index Works
 </h1>
-</header>
 
 <amp-img data-block-off-consent src="https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/Main_GoogleFonts%2520%25281%2529.png" width="300" height="201">
 </amp-img>
@@ -243,70 +242,9 @@ Ezoic created the index to help publishers better understand and contextualize t
   </amp-img>
   
   
-  </div>
-  <!-- Add where you want your sign-in button to render -->
-<!-- Use an image that follows the branding guidelines in a real app -->
-<button id="signinButton">Offline With Google</button>
-<script type="application/json">{
-  $('#signinButton').click(function() {
-    // signInCallback defined in step 6.
-    auth2.grantOfflineAccess().then(signInCallback);
-  });
-</script>
   
                                          
-  <div id="my-signin2"></div>
-  <script type="application/json">{
-    function onSuccess(googleUser) {
-      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-    }
-    function onFailure(error) {
-      console.log(error);
-    }
-    function renderButton() {
-      gapi.signin2.render('my-signin2', {
-        'scope': 'profile email',
-        'width': 240,
-        'height': 50,
-        'longtitle': true,
-        'theme': 'dark',
-        'onsuccess': onSuccess,
-        'onfailure': onFailure
-      });
-    }
-  
-
-  
-function signInCallback(authResult) {
-  if (authResult['code']) {
-
-    // Hide the sign-in button now that the user is authorized, for example:
-    $('#signinButton').attr('style', 'display: none');
-
-    // Send the code to the server
-    $.ajax({
-      type: 'POST',
-      url: 'http://www.adball.online/login',
-      // Always include an `X-Requested-With` header in every AJAX request,
-      // to protect against CSRF attacks.
-      headers: {
-        'X-Requested-With': 'XMLHttpRequest'
-      },
-      contentType: 'application/octet-stream; charset=utf-8',
-      success: function(result) {
-        // Handle or verify the server response.
-      },
-      processData: false,
-      data: authResult['code']
-    });
-  } else {
-    // There was an error.
-  }
-}
-</script>
-  
-<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-<amp-ad
+  <amp-ad
   type="a9"
   data-amzn_assoc_ad_mode="auto"
   data-divid="amzn-assoc-ad-fe746097-f142-4f8d-8dfb-45ec747632e5"
@@ -344,29 +282,7 @@ function signInCallback(authResult) {
 <amp-script layout="container" src="https://adball.online/components/amp-script/hello-world.js" class="sample">
       <button id="hello-url">Say hello!</button>
 </amp-script>
-
-<div>
-      <amp-script layout="fixed-height" height="36" script="time-script" class="sample">
-        <div>
-          The time at page load was: <span id="time" class="answer-text"></span>
-        </div>
-      </amp-script>
-
-      <script id="time-script" type="text/plain" target="amp-script">
-        const fetchCurrentTime = async () => {
-          const response = await fetch('https://amp.dev/documentation/examples/api/time');
-          const data = await response.json();
-          const span = document.getElementById('time');
-          span.textContent = data.time;
-        }
-
-        fetchCurrentTime();
-      </script>
-    </div>
-
-  
-
-
+</div>
 
 
     
